@@ -1,52 +1,46 @@
-# current
-2021-03-24 Andre Lessa <andre.lessa@ufabc.edu.br>
-    ~ added atlas_exot_2018_06, atlas_susy_2018_04, cms_sus_16_032 and cms_sus_19_005
+# CheckMATE Recasting Validation:
 
-2021-03-14   Arran Freegard <acf1g14@soton.ac.uk>
-        
-    ~ added atlas_1403_5294 and atlas_higg_2013_03
+This folder contains the files necessary for validating new ATLAS and CMS analyses implemented in CheckMATE.
 
-2021-02-12   Krzysztof Rolbiecki <krolb@fuw.edu.pl>
-        
-    ~ added atlas_1908_03122
+All the SLHA files used for validation are stored in [validation_slha.tar.gz](./validation_slha.tar.gz),
+while the CheckMATE output for each file/analysis is stored in [validation_result.tar.gz](./validation_results.tar.gz).
+
+The main steering cards for running CheckMATE (using [runCheckMateScan.py](./validation/runCheckMateScan.py) )
+are:
+
+ * [validation_atlas_susy_2018_04.ini](validation_atlas_susy_2018_04.ini)
+ * [validation_cms_sus_16_032.ini](validation_cms_sus_16_032.ini)
+ * [validation_cms_sus_19_005.ini](validation_cms_sus_19_005.ini)
+
+The CMS-SUS-16-32 analysis provided the covariance matrices (see [CMS_data](./validation_plots/CMS_data)), which are used
+for computing the exclusion curve in the validation plots.
+Although ATLAS-SUSY-2018-04 has provided likelihoods for computing a combined Stau limit, these *are not* used, thus the validation
+compares the official exclusions for both signal regions.
+
+## Validation Plots ##
+
+The following plots can be obtained running  plotValidation_xxx.py in the [validation_plots](./validation_plots) folder
+using the data stored in [validation_slha.tar.gz](./validation_slha.tar.gz) and  [validation_result.tar.gz](./validation_results.tar.gz):
 
 
-2020-11-03   Krzysztof Rolbiecki <krolb@fuw.edu.pl>
-        
-    ~ added atlas_conf_2018_041
+* ATLAS-SUSY-2018-04:
 
-2021-02-10   Krzysztof Rolbiecki <krolb@fuw.edu.pl>
-        
-    ~ added atlas_2101_01629
-    
-020-04-08   Krzysztof Rolbiecki <krolb@fuw.edu.pl>
+![Alt text](validation_plots/atlas_susy_2018_04_Stau.png?raw=true "Validation Plot")
 
-    ~ added atlas_conf_2020_048
+* CMS-SUS-16-032:
 
-2020-09-27   Manimala Chakraborti, Ipsita Saha
+![Alt text](validation_plots/cms_sus_16_032_Stop.png?raw=true "Validation Plot")
 
-    ~ added atlas_1803_02762
+![Alt text](validation_plots/cms_sus_16_032_T2bb.png?raw=true "Validation Plot")
 
-2020-09-27   Manimala Chakraborti, Ipsita Saha
 
-    ~ added atlas_conf_2019_020
+* CMS-SUS-19-005:
 
-2020-09-29   Krzysztof Rolbiecki <krolb@fuw.edu.pl>
-        
-    ~ added atlas_2004_14060
+![Alt text](validation_plots/cms_sus_19_005_T2bb.png?raw=true "Validation Plot")
 
-2020-04-08   Krzysztof Rolbiecki <krolb@fuw.edu.pl>
+![Alt text](validation_plots/cms_sus_19_005_T2tt.png?raw=true "Validation Plot")
 
-    ~ removed python Root check due to a change in naming conventions (python->pyroot) around v6.20 
+![Alt text](validation_plots/cms_sus_19_005_T2cc.png?raw=true "Validation Plot")
 
-2019-11-28   Krzysztof Rolbiecki <krolb@fuw.edu.pl>
-        
-    ~ added atlas_conf_2019_040
+![Alt text](validation_plots/cms_sus_19_005_T1.png?raw=true "Validation Plot")
 
-2019-11-22   Krzysztof Rolbiecki <krolb@fuw.edu.pl>
-        
-    ~ added atlas_1909_08457
-
-2019-10-03   Krzysztof Rolbiecki <krolb@fuw.edu.pl>
-        
-    ~ added atlas_1706_03731

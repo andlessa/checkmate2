@@ -1,0 +1,103 @@
+#: table_doi: 10.17182/hepdata.92006.v1/t17
+#: name: Cutflow for Direct Stau
+#: description: Cutflow for two reference points (${\tilde{\tau}}^{+}_{R,L} {\tilde{\tau}}^{-}_{R,L}$ production) in SR. The column labelled $N_{weighted}$ shows the results including all correction factors applied to simulation, and is normalised to 139 fb$^{-1}$, while $N_{raw}$ in brackets shows the results for the generated number of events. The quoted uncertainties are statistical only. The "Generator filter" includes the requirements that two $\tau$ in the event have ${p}_{T} > 15$ GeV and $|\eta| <$ 2.6. The "Baseline Cut" includes the requirement of two baseline $\tau$ with a minimum value at 0.01 of the boosted decision tree discriminant (JetBDTSigTransMin $>$ 0.01) and ${p}_{T, \tau_{1}} > 50$ GeV and ${p}_{T, \tau_{2}} > 40$ GeV. At the step "Trigger & offline cuts", the following requirements are applied: the event is recorded using the asymmetric di-$\tau$ trigger (di-$\tau$ $E_{T}^{miss}$ trigger) in SR-lowMass (SR-highMass), and the lepton $p_{T}$ and $E_{T}^{miss}$ are required at plateau.
+#: data_file: cutflow_for_direct_stau.yaml
+#: keyword reactions: P P --> STAU+ STAU-
+#: keyword observables: N
+#: keyword cmenergies: 13000
+#: keyword phrases: SUSY | Supersymmetry | Electroweak | Stau
+#: SQRT(S) [TeV],13
+#: LUMINOSITY [fb$^{-1}$],139
+Subject of selection,"$N_{weighted}$ (120 1) [GeV]",stat +,stat -
+"Total events",26792.49,0,0
+"Generator filter",13477.43,0,0
+"Baseline cut",1686.80,9.21,-9.21
+"2 medium $\tau$ (OS) and 3rd baseline $\tau$ veto",909.32,6.85,-6.85
+"b-jet veto",892.11,6.76,-6.76
+"Light lepton veto",890.17,6.75,-6.75
+"Z/H-veto",735.96,6.17,-6.17
+"SR-lowMass",735.96,0,0
+"Trigger & offline cuts",248.93,3.55,-3.55
+"75 GeV $< E_{T}^{miss} <$ 150 GeV",85.70,2.07,-2.07
+"2 tight $\tau$",60.19,1.73,-1.73
+"$|\Delta \phi(\tau,\tau)| >$ 0.8",60.14,1.73,-1.73
+"$\Delta R(\tau,\tau) <$ 3.2",54.73,1.65,-1.65
+"$ m_{T2} > 70 GeV $",9.78,0.67,-0.67
+"SR-highMass",735.96,0,0
+"Trigger & offline cuts",58.33,1.90,-1.90
+"$\ge$ 1 tight $\tau$",57.29,1.88,-1.88
+"$|\Delta \phi(\tau,\tau)| >$ 0.8",56.71,1.88,-1.88
+"$\Delta R(\tau,\tau) <$ 3.2",51.74,1.79,-1.79
+"$ m_{T2} > 70 GeV $",7.18,0.63,-0.63
+
+#: SQRT(S) [TeV],13
+#: LUMINOSITY [fb$^{-1}$],139
+Subject of selection,"$N_{raw}$ (120, 1) [GeV]"
+Total events,
+Generator filter,410000
+Baseline cut,43062
+2 medium $\tau$ (OS) and 3rd baseline $\tau$ veto,22493
+b-jet veto,22148
+Light lepton veto,22109
+Z/H-veto,18188
+SR-lowMass,
+Trigger & offline cuts,6512
+75 GeV $< E_{T}^{miss} <$ 150 GeV,2228
+2 tight $\tau$,1565
+"$|\Delta \phi(\tau,\tau)| >$ 0.8",1564
+"$\Delta R(\tau,\tau) <$ 3.2",1429
+$ m_{T2} > 70 GeV $,280
+SR-highMass,
+Trigger & offline cuts,1272
+$\ge$ 1 tight $\tau$,1249
+"$|\Delta \phi(\tau,\tau)| >$ 0.8",1236
+"$\Delta R(\tau,\tau) <$ 3.2",1132
+$ m_{T2} > 70 GeV $,170
+
+#: SQRT(S) [TeV],13
+#: LUMINOSITY [fb$^{-1}$],139
+Subject of selection,"$N_{weighted}$ (280, 1) [GeV]",stat +,stat -
+"Total events",1147.71,0,0
+"Generator filter",875.46,0,0
+"Baseline cut",184.36,4.57,-4.57
+"2 medium $\tau$ (OS) and 3rd baseline $\tau$ veto",101.62,3.41,-3.41
+"b-jet veto",97.79,3.29,-3.29
+"Light lepton veto",97.75,3.29,-3.29
+"Z/H-veto",83.28,2.98,-2.98
+"SR-lowMass",83.28,0,0
+"Trigger & offline cuts",44.84,2.22,-2.22
+"75 GeV $< E_{T}^{miss} <$ 150 GeV",17.48,1.38,-1.38
+"2 tight $\tau$",12.04,1.13,-1.13
+"$|\Delta \phi(\tau,\tau)| >$ 0.8",12.04,1.13,-1.13
+"$\Delta R(\tau,\tau) <$ 3.2",11.08,1.07,-1.07
+"$ m_{T2} > 70 GeV $",6.08,0.79,-0.79
+"SR-highMass",83.28,0,0
+"Trigger & offline cuts",24.88,1.57,-1.57
+"$\ge$ 1 tight $\tau$",24.21,1.54,-1.54
+"$|\Delta \phi(\tau,\tau)| >$ 0.8",23.29,1.50,-1.50
+"$\Delta R(\tau,\tau) <$ 3.2",21.95,1.48,-1.48
+"$ m_{T2} > 70 GeV $",14.35,1.13,-1.13
+
+#: SQRT(S) [TeV],13
+#: LUMINOSITY [fb$^{-1}$],139
+Subject of selection,"$N_{raw}$ (280, 1) [GeV]"
+Total events,
+Generator filter,42000
+Baseline cut,7312
+2 medium $\tau$ (OS) and 3rd baseline $\tau$ veto,3980
+b-jet veto,3903
+Light lepton veto,3888
+Z/H-veto,3382
+SR-lowMass,
+Trigger & offline cuts,1920
+75 GeV $< E_{T}^{miss} <$ 150 GeV,738
+2 tight $\tau$,512
+"$|\Delta \phi(\tau,\tau)| >$ 0.8",512
+"$\Delta R(\tau,\tau) <$ 3.2",478
+$ m_{T2} > 70 GeV $,278
+SR-highMass,
+Trigger & offline cuts,1096
+$\ge$ 1 tight $\tau$,1076
+"$|\Delta \phi(\tau,\tau)| >$ 0.8",1045
+"$\Delta R(\tau,\tau) <$ 3.2",973
+$ m_{T2} > 70 GeV $,691
