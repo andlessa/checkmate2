@@ -1,4 +1,7 @@
 # current
+2021-03-24 Andre Lessa <andre.lessa@ufabc.edu.br>
+    ~ added atlas_exot_2018_06, atlas_susy_2018_04, cms_sus_16_032 and cms_sus_19_005
+
 2021-03-14   Arran Freegard <acf1g14@soton.ac.uk>
         
     ~ added atlas_1403_5294 and atlas_higg_2013_03
