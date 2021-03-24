@@ -45,6 +45,12 @@ void AnalysisHandlerCMS_13TeV::bookAnalysis(std::string analysisName,
         a = new Cms_sus_16_025();
     else if(analysisName == "cms_sus_16_048")
         a = new Cms_sus_16_048();
+    else if(analysisName == "cms_pas_exo_16_022")
+        a = new Cms_pas_exo_16_022();
+    else if(analysisName == "cms_sus_16_032")
+        a = new Cms_sus_16_032();
+    else if(analysisName == "cms_sus_19_005")
+        a = new Cms_sus_19_005();
     else //@@extracode@@
         Global::abort(name,
                       "Cannot load analysis "+analysisName+
@@ -309,6 +315,10 @@ void AnalysisHandlerCMS_13TeV::linkObjects() {
 
         listOfAnalyses[a]->jetBTags = jetBTags;
         listOfAnalyses[a]->jetTauTags = jetTauTags;
+
+        listOfAnalyses[a]->true_b = true_b;
+        listOfAnalyses[a]->true_tau = true_tau;
+        listOfAnalyses[a]->true_c = true_c;
     }
 }
 

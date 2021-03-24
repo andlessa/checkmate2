@@ -84,28 +84,28 @@ void AnalysisHandlerATLAS_13TeV::bookAnalysis(std::string analysisName,
         a = new Atlas_conf_2017_060();
     else if(analysisName == "atlas_1706_03731")
         a = new Atlas_1706_03731();
-    else if(analysisName == "atlas_conf_2019_018")
-        a = new Atlas_conf_2019_040();
+    else if(analysisName == "atlas_1902_01636")
+        a = new Atlas_1902_01636();
     else if(analysisName == "atlas_1908_08215")
         a = new Atlas_1908_08215();
     else if(analysisName == "atlas_1909_08457")
         a = new Atlas_1909_08457();
     else if(analysisName == "atlas_conf_2019_040")
         a = new Atlas_conf_2019_040();
-    else if(analysisName == "atlas_conf_2019_020")
-        a = new Atlas_conf_2019_020();
-    else if(analysisName == "atlas_1803_02762")
-        a = new Atlas_1803_02762();
-    else if(analysisName == "atlas_conf_2018_041")
-        a = new Atlas_conf_2018_041();
-    else if(analysisName == "atlas_2101_01629")
-        a = new Atlas_2101_01629();
-    else if(analysisName == "atlas_conf_2020_048")
-        a = new Atlas_conf_2020_048();
-    else if(analysisName == "atlas_2004_14060")
-        a = new Atlas_2004_14060();
-    else if(analysisName == "atlas_1908_03122")
-        a = new Atlas_1908_03122();
+    else if(analysisName == "atlas_1710_04901")
+        a = new Atlas_1710_04901();
+    else if(analysisName == "atlas_2003_11956")
+        a = new Atlas_2003_11956();
+    else if(analysisName == "atlas_conf_2019_018")
+        a = new Atlas_conf_2019_018();
+    else if(analysisName == "atlas_1712_02118_ew")
+        a = new Atlas_1712_02118_ew();
+    else if(analysisName == "atlas_1712_02118_strong")
+        a = new Atlas_1712_02118_strong();
+    else if(analysisName == "atlas_susy_2018_04")
+        a = new Atlas_susy_2018_04();
+    else if(analysisName == "atlas_exot_2018_06")
+            a = new Atlas_exot_2018_06();
     else //@@extracode@@
         Global::abort(name,
                       "Cannot load analysis "+analysisName+
@@ -171,7 +171,7 @@ void AnalysisHandlerATLAS_13TeV::identifyElectrons() {
                 if (rand()/(RAND_MAX+1.) <  eEffTigOvMed)
                     electronsTight.push_back(cand);
             }
-	  }  
+	  }
         }
     }
 }
@@ -379,16 +379,21 @@ void AnalysisHandlerATLAS_13TeV::linkObjects() {
 
         listOfAnalyses[a]->jetBTags = jetBTags;
         listOfAnalyses[a]->jetTauTags = jetTauTags;
+
+        listOfAnalyses[a]->true_b = true_b;
+        listOfAnalyses[a]->true_tau = true_tau;
+        listOfAnalyses[a]->true_c = true_c;
+
     }
 }
 
 
 double AnalysisHandlerATLAS_13TeV::photonEffMedium(double pt,
                                              double eta) {
-    // TODO: Implement proper function 
+    // TODO: Implement proper function
     //  https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PLOTS/EGAM-2016-003/fig_02.pdf
     // (converted)
-    //  not verified with MC 
+    //  not verified with MC
     return  (pt > 35.0)  * 0.95 +
             (pt > 30.0) * (pt < 35.) * 0.90 +
 	    (pt > 25.0) * (pt < 30.) * 0.85 +
@@ -409,8 +414,8 @@ double AnalysisHandlerATLAS_13TeV::electronIDEffLoose(double pt,
                                                double eta) {
     // tuned to https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PLOTS/EGAM-2016-002/fig_01.png
     // https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2016-024/
-    double id_eff_loose = 0.976 - 0.0614*exp(1.-pt/29.1) 
-                    +  0.024;		//shift for Delphes correction	   
+    double id_eff_loose = 0.976 - 0.0614*exp(1.-pt/29.1)
+                    +  0.024;		//shift for Delphes correction
     return id_eff_loose;
 }
 
@@ -419,7 +424,7 @@ double AnalysisHandlerATLAS_13TeV::electronIDEffMedium(double pt,
     // tuned to https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PLOTS/EGAM-2016-002/fig_01.png
     // https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2016-024/
     double id_eff_loose = 0.976 - 0.0614*exp(1.-pt/29.1); //truth function without correction
-    double id_eff_medium = 0.937 - 0.109*exp(1.-pt/21.);			   
+    double id_eff_medium = 0.937 - 0.109*exp(1.-pt/21.);
     return id_eff_medium/id_eff_loose;
 }
 
@@ -428,7 +433,7 @@ double AnalysisHandlerATLAS_13TeV::electronIDEffTightOverMedium(double pt,
     // tuned to https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PLOTS/EGAM-2016-002/fig_01.png
     // https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2016-024/
     double id_eff_medium = 0.937 - 0.109*exp(1.-pt/21.);
-    double id_eff_tight = 0.8885 - 0.138*exp(1.-pt/27.45);			     
+    double id_eff_tight = 0.8885 - 0.138*exp(1.-pt/27.45);
     return id_eff_tight/id_eff_medium;
 }
 
@@ -1140,4 +1145,3 @@ const AnalysisHandlerATLAS_13TeV::muonDetector AnalysisHandlerATLAS_13TeV::detMa
         {cscla, endla, endla, endla, endla, endla, endla, trans, barla, barla, barla, barla, barla, trans, endla, endla, endla, endla, endla, endla, cscla}};
 const double AnalysisHandlerATLAS_13TeV::etaProj[21] = {-2.005, -1.955, -1.709, -1.411, -1.238, -1.163, -1.113, -0.965, -0.817, -0.519, 0.519, 0.817, 0.965, 1.113, 1.163, 1.238, 1.411, 1.709, 1.955, 2.005, 2.500};
 const double AnalysisHandlerATLAS_13TeV::phiProj[53] = {3.142, 3.009, 2.948, 2.849, 2.629, 2.529, 2.471, 2.210, 2.174, 2.065, 1.855, 1.745, 1.695, 1.436, 1.386, 1.276, 1.066, 0.957, 0.916, 0.657, 0.596, 0.496, 0.277, 0.178, 0.142, -0.142, -0.178, -0.277, -0.496, -0.596, -0.657, -0.916, -0.957, -1.018, -1.066, -1.276, -1.357, -1.386, -1.436, -1.695, -1.745, -1.797, -1.855, -2.065, -2.134, -2.174, -2.210, -2.471, -2.529, -2.629, -2.849, -2.948, -3.009};
-
