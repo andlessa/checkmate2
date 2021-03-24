@@ -45,8 +45,6 @@ void AnalysisHandlerCMS_13TeV::bookAnalysis(std::string analysisName,
         a = new Cms_sus_16_025();
     else if(analysisName == "cms_sus_16_048")
         a = new Cms_sus_16_048();
-    else if(analysisName == "cms_pas_exo_16_022")
-        a = new Cms_pas_exo_16_022();
     else if(analysisName == "cms_sus_16_032")
         a = new Cms_sus_16_032();
     else if(analysisName == "cms_sus_19_005")

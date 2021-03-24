@@ -84,24 +84,28 @@ void AnalysisHandlerATLAS_13TeV::bookAnalysis(std::string analysisName,
         a = new Atlas_conf_2017_060();
     else if(analysisName == "atlas_1706_03731")
         a = new Atlas_1706_03731();
-    else if(analysisName == "atlas_1902_01636")
-        a = new Atlas_1902_01636();
+    else if(analysisName == "atlas_conf_2019_018")
+        a = new Atlas_conf_2019_040();
     else if(analysisName == "atlas_1908_08215")
         a = new Atlas_1908_08215();
     else if(analysisName == "atlas_1909_08457")
         a = new Atlas_1909_08457();
     else if(analysisName == "atlas_conf_2019_040")
         a = new Atlas_conf_2019_040();
-    else if(analysisName == "atlas_1710_04901")
-        a = new Atlas_1710_04901();
-    else if(analysisName == "atlas_2003_11956")
-        a = new Atlas_2003_11956();
-    else if(analysisName == "atlas_conf_2019_018")
-        a = new Atlas_conf_2019_018();
-    else if(analysisName == "atlas_1712_02118_ew")
-        a = new Atlas_1712_02118_ew();
-    else if(analysisName == "atlas_1712_02118_strong")
-        a = new Atlas_1712_02118_strong();
+    else if(analysisName == "atlas_conf_2019_020")
+        a = new Atlas_conf_2019_020();
+    else if(analysisName == "atlas_1803_02762")
+        a = new Atlas_1803_02762();
+    else if(analysisName == "atlas_conf_2018_041")
+        a = new Atlas_conf_2018_041();
+    else if(analysisName == "atlas_2101_01629")
+        a = new Atlas_2101_01629();
+    else if(analysisName == "atlas_conf_2020_048")
+        a = new Atlas_conf_2020_048();
+    else if(analysisName == "atlas_2004_14060")
+        a = new Atlas_2004_14060();
+    else if(analysisName == "atlas_1908_03122")
+        a = new Atlas_1908_03122();
     else if(analysisName == "atlas_susy_2018_04")
         a = new Atlas_susy_2018_04();
     else if(analysisName == "atlas_exot_2018_06")
