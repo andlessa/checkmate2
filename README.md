@@ -17,6 +17,18 @@ for computing the exclusion curve in the validation plots.
 Although ATLAS-SUSY-2018-04 has provided likelihoods for computing a combined Stau limit, these *are not* used, thus the validation
 compares the official exclusions for both signal regions.
 
+## Basic Installation ##
+
+The following external codes must be installed:
+
+  * [Delphes](https://cp3.irmp.ucl.ac.be/projects/delphes)
+  * [Pythia8](http://home.thep.lu.se/Pythia/)
+  * [HepMC](http://lcgapp.cern.ch/project/simu/HepMC/) (optional)
+  * [MadGraph5](https://launchpad.net/mg5amcnlo/)
+
+The script [installer.sh](./validation/installer.sh) will try to fetch the appropriate tarballs and install them in the validation folder.
+
+
 ## Validation Plots ##
 
 The following plots can be obtained running  plotValidation_xxx.py in the [validation_plots](./validation_plots) folder
