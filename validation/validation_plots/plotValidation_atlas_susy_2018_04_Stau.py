@@ -10,6 +10,7 @@ import pandas as pd
 from matplotlib import pyplot as plt
 import seaborn as sns
 from getContour import getContour
+np.warnings.filterwarnings('ignore', category=np.VisibleDeprecationWarning)
 
 pd.options.mode.chained_assignment = None #Disable copy warnings
 #Define plotting style:
@@ -54,6 +55,7 @@ for slhaFile in glob.glob(slhaFolder+'/*.slha'):
 recastDataLow = np.array(recastDataLow)
 recastDataHigh = np.array(recastDataHigh)
 rData = np.array(rData)
+
 
 # %% Compute relative difference
 effsDiffLow = []
